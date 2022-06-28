@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="Design.css" />
+  </head>
+  <body align="center">
+    <div id="heading">
+      <h1>Monthly Expenses</h1>
+      <br />
+      <br />
+      <br />
+      <br />
+      <div id="form">
+        <form
+          method="POST"
+          action=""
+        >
+          <input
+            id="A1"
+            name="Commodity Name"
+            type="text"
+            placeholder="Commodity Name"
+            autocomplete="off"
+          />
+          <input
+            id="b1"
+            name="Price Per Value"
+            type="text"
+            placeholder="Price Per Value"
+            autocomplete="off"
+          />
+          <input
+            id="b2"
+            name="Quantity"
+            type="text"
+            placeholder="Quantity"
+            width="10px"
+            autocomplete="off"
+          />
+          <br />
+          <br />
+          <input
+            id="b3"
+            name="Amount"
+            type="text"
+            placeholder="Amount"
+            onclick="call()"
+            readonly
+            autocomplete="off"
+          />
+          <input name="date" id="b4" type="Date" autocomplete="off" />
+          <br />
+          <br />
+
+          <select name="Category" id="A1">
+            <option value="1">-Make a choice-</option>
+            <option value="Basic(Med,Juice)">Basic(Med, Juice)</option>
+            <option value="Food">Food</option>
+            <option value="Shopping">Shopping</option>
+            <option value="Academic">Academic</option>
+            <option value="Miscellaneous">Miscellaneous</option>
+          </select>
+          <br />
+          <br />
+
+          <button class="view-form">
+            <a
+            href=""
+              rel="noopener noreferrer"
+              target="blank"
+              >View Form</a
+            >
+          </button>
+          <button type="submit" id="A2" onclick="setTimeout(fun(), 3000)">
+              Submit
+          </button>
+          <p>Form will not work because api keys are removed</p>
+        </form>
+      </div>
+    </div>
+    <script>
+      function call() {
+        let value_1 = document.getElementById("b1").value;
+        let quantity = document.getElementById("b2").value;
+        let amount = value_1 * quantity;
+        console.log(value_1);
+        console.log(quantity);
+        console.log(amount);
+        document.getElementById("b3").value = amount;
+      }
+      function fun() {}
+    </script>
+  </body>
+</html>
