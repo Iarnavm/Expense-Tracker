@@ -82,15 +82,16 @@
         </form>
       </div>
     </div>
+    // java script 
     <script>
       function call() {
-        let value_1 = document.getElementById("b1").value;
+        let value_1 = document.getElementById("b1").value; // getting values from html input tags
         let quantity = document.getElementById("b2").value;
-        let amount = value_1 * quantity;
+        let amount = value_1 * quantity;// calculating amount
         console.log(value_1);
         console.log(quantity);
-        console.log(amount);
-        document.getElementById("b3").value = amount;
+        console.log(amount);//longging the values
+        document.getElementById("b3").value = amount;//returning the amount
       }
       function fun() {}
     </script>
